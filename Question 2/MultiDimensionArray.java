@@ -16,10 +16,15 @@ class MultiDimensionArray {
 		
 		MultiDimensionArray(){
 			arr = new long[3][3];
-			arr[1][2] = 5;
+			int ind =1;
+			for(int i=0;i<3;i++) {
+				for(int j=0;j<3;j++) {
+					arr[i][j] = ind ++; 
+				}
+			}
 		}
 		
-	    // This is a provided function, Assume it works
+	    // This is a provided function, Assume it works // we have written a simple version of the function just for testing. 
 	    public static Long getValue(int... indexOfDimension) {
 	        //... 
 	    	
@@ -30,9 +35,9 @@ class MultiDimensionArray {
 	    // lengthOfDeminsion: each dimension's length, assume it is valid: lengthOfDeminsion[i]>0.
 	    public static Long sum(MultiDimensionArray mArray, int[] lengthOfDimension) { 
 	   // Your resolution 
-	   // Time complexity:  
-	   // Space complexity: 
-			int len = lengthOfDimension.length;
+	   // Time complexity:   O(no of Elements)
+	   // Space complexity:   O(n) where n is the number of dimensions, cant be avoided because I am sending this to the function given
+ 			int len = lengthOfDimension.length;
 			int[] dimension = new int[len];
 			int poc = len-2;
 			long sum = 0;

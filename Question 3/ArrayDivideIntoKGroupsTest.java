@@ -81,28 +81,8 @@ public class ArrayDivideIntoKGroupsTest {
 
 	}
 	
-	
-
-	
 	@Test
-	public void ArraySumTestSumNotDivisible() {
-		
-		ArrayDivideIntoKGroups arrDiv = new ArrayDivideIntoKGroups();
-		List<Integer> list = new ArrayList<>();
-
-		list.add(1);
-		list.add(2);
-		
-		list.add(3);
-		list.add(4);
-		int k = 3;
-
-		assertTrue(arrDiv.separate(list, k)==false);
-
-	}
-	
-	@Test
-	public void ArraySumTestSumNotDivisible2() {
+	public void ArraySumTestSumNotContinous() {
 		
 		ArrayDivideIntoKGroups arrDiv = new ArrayDivideIntoKGroups();
 		List<Integer> list = new ArrayList<>();
@@ -122,7 +102,7 @@ public class ArrayDivideIntoKGroupsTest {
 	}
 
 	@Test
-	public void ArraySumTestSumDivisible3() {
+	public void ArraySumTestSumNotContinous2() {
 		
 		ArrayDivideIntoKGroups arrDiv = new ArrayDivideIntoKGroups();
 		List<Integer> list = new ArrayList<>();
@@ -141,6 +121,26 @@ public class ArrayDivideIntoKGroupsTest {
 
 	}
 
+
+
+	
+	@Test
+	public void ArraySumTestSumNotDivisibleByK() {
+		
+		ArrayDivideIntoKGroups arrDiv = new ArrayDivideIntoKGroups();
+		List<Integer> list = new ArrayList<>();
+
+		list.add(1);
+		list.add(2);
+		
+		list.add(3);
+		list.add(4);
+		int k = 3;
+
+		assertTrue(arrDiv.separate(list, k)==false);
+
+	}
+	
 
 
 }
